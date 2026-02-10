@@ -26,7 +26,7 @@ wbs-ts-travel-journal-api/
 |- controllers/ => Our controller functions per resource
 |- db/
 |   \_ index.js => Database connection with Mongoose
-|- middlewares/ => custom middlewares
+|- middleware/ => custom middleware
 |- models/ => Our models per resource
 |- routes/ => Our routers per resource
 |- schemas/

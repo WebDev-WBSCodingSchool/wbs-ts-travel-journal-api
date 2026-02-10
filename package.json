@@ -32,9 +32,9 @@
       "development": "./src/controllers/index.ts",
       "default": "./dist/controllers/index.js"
     },
-    "#middlewares": {
-      "development": "./src/middlewares/index.ts",
-      "default": "./dist/middlewares/index.js"
+    "#middleware": {
+      "development": "./src/middleware/index.ts",
+      "default": "./dist/middleware/index.js"
     },
     "#models": {
       "development": "./src/models/index.ts",
