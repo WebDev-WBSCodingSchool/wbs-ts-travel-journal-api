@@ -2,7 +2,7 @@ import type { RequestHandler } from 'express';
 import type { ZodObject } from 'zod/v4';
 import { z } from 'zod/v4';
 
-const validateZod =
+const validateBody =
   (zodSchema: ZodObject): RequestHandler =>
   (req, _res, next) => {
     const { data, error, success } = zodSchema.safeParse(req.body);
@@ -21,4 +21,4 @@ const validateZod =
     }
   };
 
-export default validateZod;
+export default validateBody;
