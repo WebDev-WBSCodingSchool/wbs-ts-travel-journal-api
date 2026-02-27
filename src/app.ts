@@ -7,7 +7,12 @@ import { PORT } from '#config';
 
 const app = express();
 
-app.use(cors({ origin: '*' }));
+app.use(
+  cors({
+    origin: '*',
+    exposedHeaders: ['WWW-Authenticate'] // needed to send the 'refresh trigger''
+  })
+);
 app.use(express.json());
 
 app.use('/posts', postRoutes);
