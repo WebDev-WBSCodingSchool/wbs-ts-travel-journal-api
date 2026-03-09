@@ -9,13 +9,14 @@ Starter code for authentication/authorization module at WBS Coding School
 - `cd` into working directory
 - `npm i` to install dependencies
 - create a `.env.development.local` file with variables:
-  - `MONGO_URI` set to a valid MongoDB connection string.
+  - `MONGO_URI` set to the same MongoDB connection string as the auth server.
+  - `DB_NAME` ONLY in case you want to override the default `travel-journal` (must match `DB_NAME` for auth server)
   - `PORT` ONLY in case you want to override the default `8000`
 
 ## Commands
 
 - `npm run dev`: Starts development server, pulling environment variables from `.env.development.local` file
-- `npm start`: Starts production server, pulling environment variables from the system
+- `npm start`: Builds and starts production server, pulling environment variables from `.env.production.local` file
 
 ## Usage
 
@@ -23,14 +24,13 @@ Starter code for authentication/authorization module at WBS Coding School
 
 ```
 wbs-ts-travel-journal-api/
+|- config/ => To centralise and validate env variables
 |- controllers/ => Our controller functions per resource
-|- db/
-|   \_ index.js => Database connection with Mongoose
+|- db/ => Database connection with Mongoose
 |- middleware/ => custom middleware
 |- models/ => Our models per resource
 |- routes/ => Our routers per resource
-|- schemas/
-|   \_ schemas.js => Zod schemas for data validations
+|- schemas/=> Zod schemas for data validations
 |- types/ => For additional types
-\_ index.js
+\_ app.ts
 ```
