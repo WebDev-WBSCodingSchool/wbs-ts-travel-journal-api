@@ -34,3 +34,9 @@ wbs-ts-travel-journal-api/
 |- types/ => For additional types
 \_ app.ts
 ```
+
+## Setup checklist
+
+- Run the development server
+- Look through each file to get an overview of the application
+- Test each of the endpoints
