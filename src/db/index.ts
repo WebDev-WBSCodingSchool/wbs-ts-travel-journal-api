@@ -1,9 +1,8 @@
 import mongoose from 'mongoose';
+import { MONGO_URI, DB_NAME } from '#config';
 
 try {
-  const mongoURI = process.env.MONGO_URI;
-  if (!mongoURI) throw new Error('No Mongo DB Connection String present');
-  const client = await mongoose.connect(mongoURI, { dbName: 'travel-journal' });
+  const client = await mongoose.connect(MONGO_URI, { dbName: DB_NAME });
   console.log(`Connected to MongoDB @ ${client.connection.host} - ${client.connection.name}`);
 } catch (error) {
   console.log(error);
