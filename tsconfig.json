@@ -2,29 +2,28 @@
   "compilerOptions": {
     /* Base Options: */
     "esModuleInterop": true,
-    "lib": ["es2022"],
-    "target": "es2022",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "types": ["node"],
     "skipLibCheck": true,
-    "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
+
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+
     /* Node Stuff */
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
-    "module": "preserve",
-    "noEmit": false,
-    "outDir": "dist",
-    /* Paths */
-    "baseUrl": "./src",
-    "paths": {
-      "#*": ["*"]
-    }
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "customConditions": ["development"],
+    "rootDir": "./src",
+    "outDir": "./dist"
   },
   "include": ["src"]
 }
