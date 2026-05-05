@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     /* Base Options: */
-    "esModuleInterop": true,
-    "lib": ["ESNext"],
-    "target": "ESNext",
+    "target": "ES2025",
     "types": ["node"],
     "skipLibCheck": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
@@ -16,12 +15,10 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    /* Node Stuff */
+    /* Node Stuff*/
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "customConditions": ["development"],
+    "module": "preserve",
     "rootDir": "./src",
     "outDir": "./dist"
   },
